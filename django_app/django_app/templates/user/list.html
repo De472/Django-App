@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h2>Lista de Usuários</h2>
+<ul>{%for u in users%}
+<li>{{forloop.counter}}- {{u.email}} - {{u.cpf}} - {{u.nome}}
+
+<br>
+{%endfor%}</ul>
+{%endblock%}
