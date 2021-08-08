@@ -1,22 +1,33 @@
 # Django-App
-Aplicação básica para cadastro de users feita em Django e banco MySQL. Feita em 5 dias para uma vaga de estágio.
-
-Ainda está em desenvolvimento.
-
+Aplicação básica para cadastro de usuários feita em Django com banco MySQL. Feita em 5 dias para uma vaga de estágio.
 
 # Funções:
-- Cadastro de users (email, cpf e nome);
+- Cadastro de usuários (email, cpf e nome);
+  - Não permite cadastrar se já existir registro do email ou cpf.
 - Listagem de todos os users no banco.
-
 
 
 ---------
 # Requeriments:
 Python3
--> Coisas do pip:
+-> Instalar requirements.txt e alterar a secret key.
 ```
-pip install django
-pip install mysqlclient
+pip install -r requirements.txt
 ```
 Banco MySQL
--> É necessario mudar no código o nome, user e senha
+-> É necessario criar um banco e em seguida mudar no código o nome do banco, user e senha;
+
+-> Após o primeiro passo é necessário executar makemigrations e migrate para o banco ser configurado.
+```
+python manage.py makemigrations
+
+python manage.py migrate
+```
+
+
+---------
+# Executando:
+```
+pip manage.py runserver
+```
+Para parar aperte Ctrl+C no terminal
