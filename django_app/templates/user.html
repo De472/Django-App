@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block script%}
+<script>
+    function maskCpf() {
+        var cpf = document.getElementById("cpf");
+        const n = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+        console.log(cpf.value.slice(cpf.length - 1));
+            if (cpf.value.length == 3 || cpf.value.length == 7) {
+                cpf.value += ".";
+            } else if (cpf.value.length == 11) {
+                cpf.value += "-";
+            }
+    }
+</script>
+{%endblock%}
+
+{%block content%}
+<h2 style="text-align:center;">Cadastro de Usuários</h2>
+<p style="text-align:center;">Page to add new users
+<br><br>
+<form>
+    <label for="email">Coloque seu Email:</label>
+    <input type="email" id="email" placeholder="name123@mail.com"><br>
+    <label for="cpf">Coloque seu CPF:</label>
+    <input type="text" id="cpf" placeholder="111.222.333-44" maxlength="14" onkeypress="maskCpf()"><br>
+    <label for="nome">Coloque seu Nome:</label>
+    <input type="text" id="nome" placeholder="Ana Maria"><br>
+</form>
+
+
+<a href="/">Home</a></p>
+{%endblock%}

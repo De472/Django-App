@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+
+{%block header%}
+<style>
+    table, th, td {
+        border: 1px solid;
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: center;
+    }
+    th {
+        background-color: #8AACD2;
+    }
+    tr {
+        background-color: #E4E4E4;
+    }
+    #table-wrapper table {
+        width:100%;
+    }
+    #table-scroll {
+        width: 70%;
+        height:380px;
+        overflow:auto;
+    }
+</style>
+{%endblock%}
+
+{%block body%}
+<h2>Lista de Usuários</h2>
+<div id="table-wrapper">
+    <div id="table-scroll">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+
+        {%for u in users%}
+            <tbody>
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{u.cpf}}</td>
+                    <td>{{u.nome}}</td>
+                </tr>
+            </tbody>
+        {%endfor%}
+
+        </table>
+    </div>
+</div>
+{%endblock%}
