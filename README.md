@@ -30,6 +30,6 @@ python manage.py migrate
 ---------
 # Executando:
 ```
-pip manage.py runserver
+python manage.py runserver
 ```
-Para parar aperte Ctrl+C no terminal
+Para parar aperte Ctrl+C no terminal.
