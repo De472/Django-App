@@ -2,18 +2,31 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    {%block script%}
-
-    {%endblock%}
     <title>Django App</title>
     <h1 style="text-align:center;">Aplicação Básica Feita Em Django</h1>
-</head>
-<body>
-    <br>
-    {%block content%}
+    <div id="strip"/>
+    <style>
+        #strip{
+            width: 100%; height: 4px;
+            border-style: solid;
+            border-color: blue;
+            background-color: white;
+        }
+    </style>
+
+    {%block header%}
 
     {%endblock%}
-    <p style="position: absolute; bottom: 0px;"><b>Devanir Ramos Junior</b></p>
+
+</head>
+<body>
+    <center>
+    {%block body%}
+
+    {%endblock%}
+    </center>
+    <a href="/" style="position: absolute; bottom: 10%; right: 47%; font-size:2em">Home</a>
+    <p style="position: absolute; bottom: 0%;" ><b>Devanir Ramos Junior</b></p>
+
 </body>
 </html>
